@@ -139,6 +139,33 @@ i {
 
 .chat-text {
   background-image: url(../img/mine.jpg);
+  overflow-y: auto;
+}
+
+.chat-text div {
+  position: relative;
+  width: 40%;
+  border-radius: 5px;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.chat-text div span {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 10px;
+  color: darkgray;
+  z-index: 1;
+}
+
+.chat-text .user-message {
+  align-self: flex-end;
+  background-color: #d5f9ba;
+}
+
+.chat-text .contact-message {
+  background-color: white;
 }
 
 .user-input {
