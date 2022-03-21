@@ -71,7 +71,9 @@
             <!-- Single Chat -->
             <div
               class="chat d-flex p-3 justify-content-between"
-              v-for="chat in contacts"
+              v-for="(chat, index) in contacts"
+              :class="(index === activeChat) ? 'active' : '' "
+              @click="changeChat(index)"
             >
               <!-- Left -->
               <div class="d-flex gap-3">
@@ -99,10 +101,18 @@
             class="d-flex contact-header justify-content-between align-items-center p-3"
           >
             <!-- User -->
-            <div class="d-flex gap-2 align-items-center">
-              <img class="icon" src="img/avatar_io.jpg" alt="user icon" />
+            <div
+              v-for="(user, index) in contacts"
+              class="gap-2 align-items-center d-none"
+              :class="(index === activeChat) ? 'active' : '' "
+            >
+              <img
+                class="icon"
+                :src="`img/avatar${user.avatar}.jpg`"
+                alt="user icon"
+              />
               <div>
-                <h2>Sofia</h2>
+                <h2>{{ user.name }}</h2>
                 <p>Ultimo accesso alle</p>
               </div>
             </div>

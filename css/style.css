@@ -117,6 +117,10 @@ i {
   cursor: pointer;
 }
 
+.chat.active {
+  background-color: #f4f4f4;
+}
+
 .chat p,
 .chat span {
   color: #bdbebf;
@@ -127,6 +131,10 @@ i {
 .contact-header p {
   font-size: 0.8rem;
   color: #6b7376;
+}
+
+.contact-header div.active {
+  display: flex !important;
 }
 
 .chat-text {
