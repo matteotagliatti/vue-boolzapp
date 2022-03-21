@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue-Boolzapp</title>
+
+    <!-- Vue CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/d52bda3773.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- My Style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div></div>
+    <main class="container m-3" id="app">
+      <div class="row">
+        <!-- Left Section -->
+        <div class="col-4">
+          <!-- User Header -->
+          <div
+            class="d-flex user-header justify-content-between align-items-center p-3"
+          >
+            <!-- User -->
+            <div class="d-flex gap-2 align-items-center">
+              <img
+                class="icon"
+                src="https://source.unsplash.com/random"
+                alt="user icon"
+              />
+              <h2>Sofia</h2>
+            </div>
+            <!-- Icons -->
+            <div class="d-flex gap-3 align-items-center">
+              <i class="fa-solid fa-circle-notch"></i>
+              <i class="fa-solid fa-message"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
+          <!-- Notifications -->
+          <div class="notifications p-3 d-flex gap-2">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <i class="fa-solid fa-bell-slash"></i>
+            </div>
+            <div>
+              <p class="title">Ricevi notifiche di nuovi messaggi</p>
+              <p class="subtitle">Attiva notifiche desktop</p>
+            </div>
+          </div>
+          <!-- Search Box -->
+          <div class="search-box p-2">
+            <div>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" name="" id="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="col-8"></div>
+      </div>
+    </main>
+    <script src="js/script.js/"></script>
+  </body>
+</html>

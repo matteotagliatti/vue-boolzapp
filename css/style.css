@@ -1,0 +1,76 @@
+:root {
+  --light-green: #25d366;
+  --teal-dark-green: #075e54;
+  --teal-green: #128c7e;
+}
+
+body {
+  background-color: #f0eff0;
+}
+
+body > div {
+  height: 100px;
+  background-color: var(--teal-dark-green);
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+p,
+span {
+  font-size: 1rem;
+}
+
+i {
+  color: #b1b1b1;
+  font-size: 1.4rem;
+}
+
+.user-header {
+  background-color: #eaeaea;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.notifications {
+  background-color: #8edafc;
+}
+
+.notifications .icon {
+  background-color: white;
+}
+
+.notifications .icon i {
+  color: #8edafc;
+}
+
+.notifications p.title {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.notifications p.subtitle {
+  margin-bottom: 0;
+  color: #748485;
+  text-decoration: underline;
+}
+
+.search-box {
+  background-color: #eaeaea;
+}
+
+.search-box div {
+  background-color: white;
+}
