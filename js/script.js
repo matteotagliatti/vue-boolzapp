@@ -194,7 +194,9 @@ const app = new Vue({
     },
 
     searchContains(chatIndex) {
-      return this.contacts[chatIndex].name.includes(this.search);
+      return this.contacts[chatIndex].name
+        .toLowerCase()
+        .includes(this.search.toLowerCase());
     },
   },
 });
