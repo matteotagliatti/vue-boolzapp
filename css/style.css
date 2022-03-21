@@ -142,15 +142,16 @@ i {
   overflow-y: auto;
 }
 
-.chat-text div {
+.chat-text div.message {
   position: relative;
   width: 40%;
   border-radius: 5px;
   padding: 0.8rem;
   margin-bottom: 1rem;
+  background-color: white;
 }
 
-.chat-text div span {
+.chat-text div.message span {
   position: absolute;
   right: 5px;
   bottom: 5px;
@@ -165,7 +166,10 @@ i {
 }
 
 .chat-text .contact-message {
-  background-color: white;
+}
+
+.chat-text .active {
+  display: block !important;
 }
 
 .user-input {
