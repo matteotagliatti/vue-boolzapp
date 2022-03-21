@@ -18,6 +18,7 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  min-width: 1100px;
 }
 
 h2 {
@@ -73,4 +74,31 @@ i {
 
 .search-box div {
   background-color: white;
+}
+
+.search-box i {
+  font-size: 1rem;
+}
+
+.search-box input {
+  border: transparent;
+}
+
+.chats {
+  background-color: white;
+}
+
+.chat:hover {
+  background-color: #e9ebeb;
+  cursor: pointer;
+}
+
+.chat h2,
+.chat p {
+  margin-bottom: 0;
+}
+
+.chat p,
+.chat span {
+  color: #bdbebf;
 }

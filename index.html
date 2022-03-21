@@ -23,7 +23,7 @@
   </head>
   <body>
     <div></div>
-    <main class="container m-3" id="app">
+    <main class="container" id="app">
       <div class="row">
         <!-- Left Section -->
         <div class="col-4">
@@ -33,11 +33,7 @@
           >
             <!-- User -->
             <div class="d-flex gap-2 align-items-center">
-              <img
-                class="icon"
-                src="https://source.unsplash.com/random"
-                alt="user icon"
-              />
+              <img class="icon" src="img/avatar_io.jpg" alt="user icon" />
               <h2>Sofia</h2>
             </div>
             <!-- Icons -->
@@ -59,13 +55,41 @@
           </div>
           <!-- Search Box -->
           <div class="search-box p-2">
-            <div>
+            <div class="d-flex align-items-center gap-2 px-3 py-1">
               <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" name="" id="" />
+              <input
+                class="w-100"
+                type="text"
+                name=""
+                id=""
+                placeholder="Cerca o inizia una nuova chat"
+              />
+            </div>
+          </div>
+          <!-- Chats -->
+          <div class="chats">
+            <!-- Single Chat -->
+            <div
+              class="chat d-flex p-3 justify-content-between"
+              v-for="chat in contacts"
+            >
+              <!-- Left -->
+              <div class="d-flex gap-3">
+                <img
+                  class="icon"
+                  :src="`img/avatar${chat.avatar}.jpg`"
+                  alt=""
+                />
+                <div>
+                  <h2>{{ chat.name }}</h2>
+                  <p>Ultimo messaggio inviato</p>
+                </div>
+              </div>
+              <!-- Right -->
+              <span>12:00</span>
             </div>
           </div>
         </div>
-
         <!-- Right Section -->
         <div class="col-8"></div>
       </div>
