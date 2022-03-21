@@ -2,6 +2,7 @@ const app = new Vue({
   el: "#app",
   data: {
     activeChat: 0,
+    message: "",
     contacts: [
       {
         name: "Michele",
@@ -170,6 +171,15 @@ const app = new Vue({
   methods: {
     changeChat(chatIndex) {
       this.activeChat = chatIndex;
+    },
+
+    sendMessage(chatIndex) {
+      const newMessage = {};
+      newMessage.message = this.message;
+      newMessage.status = "sent";
+      newMessage.date = "placeholder"; // to edit in the future
+      this.contacts[chatIndex].messages.push(newMessage);
+      this.message = "";
     },
   },
 });
