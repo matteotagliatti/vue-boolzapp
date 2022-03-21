@@ -180,6 +180,16 @@ const app = new Vue({
       newMessage.date = "placeholder"; // to edit in the future
       this.contacts[chatIndex].messages.push(newMessage);
       this.message = "";
+
+      setTimeout(this.receiveMessage, 1000, chatIndex); // trigger computer generated answer
+    },
+
+    receiveMessage(chatIndex) {
+      const newComputerMessage = {};
+      newComputerMessage.message = "ok";
+      newComputerMessage.status = "received";
+      newComputerMessage.date = "placeholder"; // to edit in the future
+      this.contacts[chatIndex].messages.push(newComputerMessage);
     },
   },
 });
