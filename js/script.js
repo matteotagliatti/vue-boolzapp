@@ -3,6 +3,7 @@ const app = new Vue({
   data: {
     activeChat: 0,
     message: "",
+    search: "",
     contacts: [
       {
         name: "Michele",
@@ -190,6 +191,10 @@ const app = new Vue({
       newComputerMessage.status = "received";
       newComputerMessage.date = "placeholder"; // to edit in the future
       this.contacts[chatIndex].messages.push(newComputerMessage);
+    },
+
+    searchContains(chatIndex) {
+      return this.contacts[chatIndex].name.includes(this.search);
     },
   },
 });
