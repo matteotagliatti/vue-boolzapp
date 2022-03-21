@@ -1,11 +1,3 @@
-/* Variables */
-
-:root {
-  --light-green: #25d366;
-  --teal-dark-green: #075e54;
-  --teal-green: #128c7e;
-}
-
 /* Global */
 
 body {
@@ -14,7 +6,7 @@ body {
 
 body > div {
   height: 100px;
-  background-color: var(--teal-dark-green);
+  background-color: #075e54;
 }
 
 main {
