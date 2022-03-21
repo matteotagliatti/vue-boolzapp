@@ -144,7 +144,7 @@ i {
 
 .chat-text div.message {
   position: relative;
-  width: 40%;
+  width: 45%;
   border-radius: 5px;
   padding: 0.8rem;
   margin-bottom: 1rem;
@@ -160,16 +160,16 @@ i {
   z-index: 1;
 }
 
-.chat-text .user-message {
+.chat-text div.message.user-message {
   align-self: flex-end;
   background-color: #d5f9ba;
 }
 
-.chat-text .contact-message {
+.chat-text div.message.contact-message {
 }
 
 .chat-text .active {
-  display: block !important;
+  display: flex !important;
 }
 
 .user-input {

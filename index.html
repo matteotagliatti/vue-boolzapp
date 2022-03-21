@@ -124,14 +124,18 @@
             </div>
           </div>
           <!-- Chat -->
-          <div class="chat-text flex-grow-1 p-4 d-flex flex-column">
+          <div class="chat-text flex-grow-1 p-4">
             <div
-              class="d-none"
+              class="d-none flex-column"
               v-for="(chat, index) in contacts"
               :class="(index === activeChat) ? 'active' : '' "
             >
               <!-- Single Message -->
-              <div class="message" v-for="text in chat.messages">
+              <div
+                class="message"
+                v-for="text in chat.messages"
+                :class="(text.status === 'sent') ? 'user-message' : 'contact-message' "
+              >
                 <p>{{ text.message }}</p>
                 <span>{{ text.date }}</span>
               </div>
