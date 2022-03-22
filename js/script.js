@@ -33,17 +33,17 @@ const app = new Vue({
         visible: true,
         messages: [
           {
-            date: "20/03/2020 16:30:00",
+            date: "10/03/2020 16:30:00",
             message: "Ciao come stai?",
             status: "sent",
           },
           {
-            date: "20/03/2020 16:30:55",
+            date: "10/03/2020 16:30:55",
             message: "Bene grazie! Stasera ci vediamo?",
             status: "received",
           },
           {
-            date: "20/03/2020 16:35:00",
+            date: "10/03/2020 16:35:00",
             message: "Mi piacerebbe ma devo andare a fare la spesa.",
             status: "sent",
           },
@@ -55,17 +55,17 @@ const app = new Vue({
         visible: true,
         messages: [
           {
-            date: "28/03/2020 10:10:40",
+            date: "11/03/2020 10:10:40",
             message: "La Marianna va in campagna",
             status: "received",
           },
           {
-            date: "28/03/2020 10:20:10",
+            date: "11/03/2020 10:20:10",
             message: "Sicuro di non aver sbagliato chat?",
             status: "sent",
           },
           {
-            date: "28/03/2020 16:15:22",
+            date: "11/03/2020 16:15:22",
             message: "Ah scusa!",
             status: "received",
           },
@@ -178,7 +178,7 @@ const app = new Vue({
       const newMessage = {};
       newMessage.message = this.message;
       newMessage.status = "sent";
-      newMessage.date = dayjs().format("DD/MM/YYYY HH:mm:ss");
+      newMessage.date = dayjs().format("MM/DD/YYYY HH:mm:ss");
       this.contacts[chatIndex].messages.push(newMessage);
       this.message = "";
 
@@ -189,7 +189,7 @@ const app = new Vue({
       const newComputerMessage = {};
       newComputerMessage.message = "ok";
       newComputerMessage.status = "received";
-      newComputerMessage.date = dayjs().format("DD/MM/YYYY HH:mm:ss");
+      newComputerMessage.date = dayjs().format("MM/DD/YYYY HH:mm:ss");
       this.contacts[chatIndex].messages.push(newComputerMessage);
     },
 
@@ -201,6 +201,10 @@ const app = new Vue({
 
     deleteMessage(messageIndex) {
       this.contacts[this.activeChat].messages.splice(messageIndex, 1);
+    },
+
+    getDate(date) {
+      return dayjs(date, "DD/MM/YYYY HH:mm:ss").format("HH:mm");
     },
   },
 });

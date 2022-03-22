@@ -92,7 +92,10 @@
                 </div>
               </div>
               <!-- Right -->
-              <span>12:00</span>
+              <span
+                >{{ getDate(chat.messages[chat.messages.length - 1].date)
+                }}</span
+              >
             </div>
           </div>
         </div>
@@ -117,7 +120,10 @@
               />
               <div>
                 <h2>{{ user.name }}</h2>
-                <p>Ultimo accesso alle 12:00</p>
+                <p>
+                  Ultimo accesso alle {{
+                  getDate(user.messages[user.messages.length - 1].date) }}
+                </p>
               </div>
             </div>
             <!-- Icons -->
@@ -141,7 +147,7 @@
                 :class="(text.status === 'sent') ? 'user-message' : 'contact-message' "
               >
                 <p>{{ text.message }}</p>
-                <span>{{ text.date }}</span>
+                <span>{{ getDate(text.date) }}</span>
                 <i class="fa-solid fa-chevron-down"></i>
                 <div>
                   <p>Informazioni</p>
