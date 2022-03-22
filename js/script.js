@@ -178,7 +178,7 @@ const app = new Vue({
       const newMessage = {};
       newMessage.message = this.message;
       newMessage.status = "sent";
-      newMessage.date = "placeholder"; // to edit in the future
+      newMessage.date = dayjs().format("DD/MM/YYYY HH:mm:ss");
       this.contacts[chatIndex].messages.push(newMessage);
       this.message = "";
 
@@ -189,7 +189,7 @@ const app = new Vue({
       const newComputerMessage = {};
       newComputerMessage.message = "ok";
       newComputerMessage.status = "received";
-      newComputerMessage.date = "placeholder"; // to edit in the future
+      newComputerMessage.date = dayjs().format("DD/MM/YYYY HH:mm:ss");
       this.contacts[chatIndex].messages.push(newComputerMessage);
     },
 
