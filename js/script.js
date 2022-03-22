@@ -198,5 +198,9 @@ const app = new Vue({
         .toLowerCase()
         .includes(this.search.toLowerCase());
     },
+
+    deleteMessage(messageIndex) {
+      this.contacts[this.activeChat].messages.splice(messageIndex, 1);
+    },
   },
 });

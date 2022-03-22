@@ -116,6 +116,7 @@ i {
 .chat p,
 .chat span {
   color: #bdbebf;
+  font-size: 0.9rem;
 }
 
 /* Classes - Right Section */
@@ -132,6 +133,10 @@ i {
 .chat-text {
   background-image: url(../img/mine.jpg);
   overflow-y: auto;
+}
+
+.chat-text .active {
+  display: flex !important;
 }
 
 .chat-text div.message {
@@ -160,12 +165,42 @@ i {
 .chat-text div.message.contact-message {
 }
 
-.chat-text .active {
-  display: flex !important;
+.chat-text div.message i {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 1rem;
 }
 
-.user-input {
-  background-color: #f3eeea;
+.chat-text div.message i:hover {
+  cursor: pointer;
+}
+
+.chat-text div.message i + div {
+  display: none;
+}
+
+.chat-text div.message i + div p {
+  padding: 0.7rem;
+}
+
+.chat-text div.message i + div p:hover {
+  background-color: #f4f4f4;
+}
+
+.chat-text div.message i:hover + div,
+.chat-text div.message i + div:hover {
+  display: block;
+  position: absolute;
+  top: 1.3rem;
+  right: 0;
+  background-color: white;
+  color: #6b7376;
+  z-index: 2;
+}
+
+.hover-pointer:hover {
+  cursor: pointer;
 }
 
 .user-input i {

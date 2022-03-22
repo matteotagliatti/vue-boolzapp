@@ -78,7 +78,7 @@
               @click="changeChat(index)"
             >
               <!-- Left -->
-              <div class="d-flex gap-3">
+              <div class="d-flex gap-3 align-items-center">
                 <img
                   class="icon"
                   :src="`img/avatar${chat.avatar}.jpg`"
@@ -135,11 +135,18 @@
               <!-- Single Message -->
               <div
                 class="message"
-                v-for="text in chat.messages"
+                v-for="(text, index) in chat.messages"
                 :class="(text.status === 'sent') ? 'user-message' : 'contact-message' "
               >
                 <p>{{ text.message }}</p>
                 <span>{{ text.date }}</span>
+                <i class="fa-solid fa-chevron-down"></i>
+                <div>
+                  <p>Informazioni</p>
+                  <p class="hover-pointer" @click="deleteMessage(index)">
+                    Cancella il messaggio
+                  </p>
+                </div>
               </div>
             </div>
           </div>
